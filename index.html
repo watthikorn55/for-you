@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>for you</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Mali:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ฉากหลังอลังการ -->
+  <div class="bg">
+    <div class="aurora"></div>
+    <div class="rays"></div>
+
+    <!-- หัวใจดวงใหญ่ -->
+    <div class="bigheart">
+      <svg class="ring" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M50 90 C20 68 6 48 6 30 C6 16 17 8 29 8 C39 8 47 14 50 22 C53 14 61 8 71 8 C83 8 94 16 94 30 C94 48 80 68 50 90 Z"
+              fill="none" stroke="#e8be6e" stroke-width=".5"/>
+      </svg>
+      <svg class="ring r2" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M50 90 C20 68 6 48 6 30 C6 16 17 8 29 8 C39 8 47 14 50 22 C53 14 61 8 71 8 C83 8 94 16 94 30 C94 48 80 68 50 90 Z"
+              fill="none" stroke="#d9587a" stroke-width=".5"/>
+      </svg>
+      <svg class="main" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="hFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d9587a" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#7d1f4d" stop-opacity=".35"/>
+          </linearGradient>
+          <linearGradient id="hStroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f3d9a4"/>
+            <stop offset=".5" stop-color="#c9974a"/>
+            <stop offset="1" stop-color="#f3d9a4"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 90 C20 68 6 48 6 30 C6 16 17 8 29 8 C39 8 47 14 50 22 C53 14 61 8 71 8 C83 8 94 16 94 30 C94 48 80 68 50 90 Z"
+              fill="url(#hFill)" stroke="url(#hStroke)" stroke-width="1"/>
+        <path d="M50 80 C27 62 15 47 15 32 C15 22 22 16 30 16 C38 16 46 21 50 30 C54 21 62 16 70 16 C78 16 85 22 85 32 C85 47 73 62 50 80 Z"
+              fill="none" stroke="#f3d9a4" stroke-opacity=".35" stroke-width=".4"/>
+      </svg>
+    </div>
+
+    <canvas id="fx"></canvas>
+    <div class="vignette"></div>
+  </div>
+
+  <!-- ดอกไม้บาน -->
+  <div id="garden"></div>
+
+  <!-- การ์ดข้อความ -->
+  <div id="message">
+    <div class="card">
+      <h2>คิดถึงพี่มากๆๆๆๆ</h2>
+      <p>เริ่มเดือนใหม่แล้ว... คิดถึงพี่มากๆ อยากส่งรอยยิ้มให้ทุกวันเลย ถึงจะอยู่ไกลกัน แต่ใจมันอยู่กับพี่ตลอดนะ ขอให้เดือนนี้เป็นเดือนที่ดี โชคดี และมีแต่เรื่องราวอบอุ่นใจเข้ามาในชีวิตพี่นะ</p>
+
+      <!-- ปุ่มเปิดคำอวยพร -->
+      <button id="wishBtn">กดเปิดคำอวยพร</button>
+      <div id="wish">
+        <p>อวยพรไม่เป็นหรอก พรไหน swag😎 ยกให้พี่หมดเลย หยอกๆ<br>เข้าเดือนใหม่แล้ว ดูแลตัวเองด้วยนะ ไม่เจ็บไม่ป่วย ขอให้เป็นเดือนที่ดีนะ มีความสุขในเดือนนี้มากๆ นะ<br>คิดถึงพี่เสมอครับ 💖</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- กล่องของขวัญ -->
+  <div id="gift-section">
+    <div class="gift-container">
+      <img src="https://i.postimg.cc/NGWTFGf3/picmix-com-2350053.gif" alt="Gift Box" class="gift-box">
+      <div class="title-text">For you P pui</div>
+      <div class="sub-text">(tap to open)</div>
+    </div>
+  </div>
+
+  <!-- ปุ่มปิด/เปิดเสียงเพลง -->
+  <button id="mute" aria-label="เปิด/ปิดเสียง">🔊</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
